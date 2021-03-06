@@ -1,0 +1,40 @@
+#+TITLE: Notes
+#+AUTHOR:
+#+EMAIL:
+
+* Tasks
+** TODO   Register user addresses
+Steps 1 & 2, correlate user addresses with Mixer a deposit address
+*** POST mixer/register
+**** Request
+["address1", "address2"]
+**** Response
+***** return-code
+202
+***** body
+{"mixer_address_explorer_url" : "http://mixer/exlorer/address/{address_id}"}
+*** GET mixer/correlated/address/{deposit-address}
+**** Response
+[address]
+** TODO withdraw
+buy stuff
+*** POST withdraw/{deposit-address}
+**** Request
+    {"to": "address", "amount": 123, "currency": BTC}
+**** Response
+***** return-code
+202
+***** body
+{"mixer_transaction_explorer_url" : "http://mixer/explorer/transactions/{transaction_id}"}
+
+** TODO Transfer to big-house account
+*** TODO detect transfer to correlated deposit account by pulling from P2P Bitcoin
+*** TODO transfer to big-house account
+*** TODO  pay to withdraw address
+
+
+*
+** POST /user/register
+** GET  /user/address/{address}
+** POST /mixer/order/withdraw/{address}
+** GET  /mixer/explore/transaction/{transaction_id}

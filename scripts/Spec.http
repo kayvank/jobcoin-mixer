@@ -1,0 +1,15 @@
+# GET http://localhost:9000/v1/addresses/address1234
+# GET http://localhost:9000/v1/healthcheck
+
+# POST http://localhost:9000/v1/user/register
+# Content-Type: application/json
+# [
+#     "address1", "address2"
+# ]
+
+POST http://localhost:9000/v1/transaction/withdraw/123456Address
+Content-Type: application/json
+ {
+  "to" : "testpublicaddress",
+  "amount" : 3.98
+}
