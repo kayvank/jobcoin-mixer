@@ -16,5 +16,5 @@ sbt bootstrap/run
 ```
 
 ### Integration tests
-Integration tests are in [Spec.http](./modules/scripts/Spec.http)
+Integration tests are in [Spec.http](./scripts/Spec.http)
 User [emacs Rest client](https://github.com/pashky/restclient.el) to run the tests, or translate to curl scripts.
